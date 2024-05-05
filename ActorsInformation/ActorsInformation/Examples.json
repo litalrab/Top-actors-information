@@ -1,0 +1,188 @@
+curl -X 'GET' \
+  'http://localhost:33682/api/Actors' \
+  -H 'accept: text/plain' \
+  -H 'XApiKey: 6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN'
+  
+  {
+  "actors": [
+    {
+      "id": "5a03fd7c-2eef-4677-b7bb-4caddb7c3b4a",
+      "name": "Charles Chaplin"
+    },
+    {
+      "id": "9ec4c9fc-7650-4cb5-8574-3f6e41590015",
+      "name": "Marlon Brando"
+    },
+    {
+      "id": "1c0cc9d9-05ff-41ca-890c-ec0b71438c93",
+      "name": "Jack Nicholson"
+    },
+    {
+      "id": "7a7b44d7-51cc-433a-a1de-0d1dfa306bb4",
+      "name": "Daniel Day-Lewis"
+    },
+    {
+      "id": "f8935413-8ec6-4b51-8711-99e692e9777a",
+      "name": "Meryl Streep"
+    },
+    {
+      "id": "dbdf55e6-5105-4405-af3b-7ff9d56a4f25",
+      "name": "Tom Hanks"
+    },
+    {
+      "id": "b19d06cd-ef04-40ec-8bb0-58337ce6233a",
+      "name": "Mohanlal"
+    },
+    {
+      "id": "271084fe-17a0-4330-b594-7293bfdb2e66",
+      "name": "Robert De Niro"
+    },
+    {
+      "id": "ca3f044c-4f1f-4eb3-9c7b-6c7a3557c11b",
+      "name": "Anthony Hopkins"
+    },
+    {
+      "id": "6ef4f2b3-d3f5-4b7f-a927-7120c441616b",
+      "name": "Al Pacino"
+    },
+    {
+      "id": "2d8bbe5a-3f2b-478d-9686-17658701b56b",
+      "name": "Leonardo DiCaprio"
+    },
+    {
+      "id": "faee768d-057d-4da7-968b-15eb975ab431",
+      "name": "Joaquin Phoenix"
+    },
+    {
+      "id": "18917931-bb08-48bc-ab2a-7e70e39225a5",
+      "name": "Christoph Waltz"
+    },
+    {
+      "id": "9803415b-edda-4e3e-828e-a2b89d154a1f",
+      "name": "Kamal Haasan"
+    },
+    {
+      "id": "00ee62e7-d886-4d88-a503-0dcc4382687b",
+      "name": "Choi Min-sik"
+    },
+    {
+      "id": "e9ad2b20-b8fe-4062-8430-1bd0cac1d3fd",
+      "name": "Gary Oldman"
+    },
+    {
+      "id": "454668a3-6ccc-4457-a760-cd7bc81ef8a9",
+      "name": "Heath Ledger"
+    },
+    {
+      "id": "e70825c7-42ae-48ad-9399-0f2af5acc2f8",
+      "name": "Javier Bardem"
+    },
+    {
+      "id": "c0cc281d-9814-493f-9734-159e90c40197",
+      "name": "Mammootty"
+    },
+    {
+      "id": "0b5bf57f-c49b-4238-a2d4-146cb62f2e37",
+      "name": "Russell Crowe"
+    }
+  ],
+  "traceId": "4b8f2ef5-c404-4850-8a29-1a155eb2b8d6",
+  "isSuccess": true,
+  "statusCode": 200,
+  "errors": null
+}
+
+
+
+///////////////////////////////////////////////
+//////////    ADD         /////////////////////
+///////////////////////////////////////////////
+
+curl -X 'POST' \
+  'http://localhost:33682/api/Actors' \
+  -H 'accept: text/plain' \
+  -H 'XApiKey: 6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": "string",
+  "name": "LRHFkoKJxCMEqeRTqGpAhSwcqOGJG",
+  "details": "string",
+  "type": "kWZkoeSmCDiyRcOWYeJzOACClwqMTKnRcoKwtyLQAZRwMuDkMOMbPqMMLe",
+  "rank": 2147483647,
+  "source": "string"
+}'
+
+{
+  "traceId": "64581df0-ac29-40c6-9080-24b0b4909154",
+  "isSuccess": true,
+  "statusCode": 200,
+  "errors": null
+}
+
+///////////////////////////////////////////
+/////////   GET           /////////////////
+////////////////////////////////////////
+
+curl -X 'GET' \
+  'http://localhost:33682/api/Actors/string' \
+  -H 'accept: text/plain' \
+  -H 'XApiKey: 6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN'
+  
+  {
+  "actor": {
+    "id": "string",
+    "name": "LRHFkoKJxCMEqeRTqGpAhSwcqOGJG",
+    "details": "string",
+    "type": "kWZkoeSmCDiyRcOWYeJzOACClwqMTKnRcoKwtyLQAZRwMuDkMOMbPqMMLe",
+    "rank": 2147483647,
+    "source": "string"
+  },
+  "traceId": "ffe4ef84-2f77-4506-a660-c6be764ec018",
+  "isSuccess": true,
+  "statusCode": 200,
+  "errors": null
+}
+
+
+|||||||||||||||||||||||||||||||||||||
+||||||||||  Update          ||||||||||||
+|||||||||||||||||||||||||||||||||||||
+
+
+curl -X 'PUT' \
+  'http://localhost:33682/api/Actors' \
+  -H 'accept: text/plain' \
+  -H 'XApiKey: 6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": "string",
+  "name": "nPmKLDQYzDbELUOSoFfmWGCccxOWcwgv",
+  "details": "string",
+  "type": "gkWXloJHJNzhVWGBgdFh",
+  "rank": 21474836,
+  "source": "string"
+}'
+
+{
+  "traceId": "86795203-f25e-4a44-99d6-7e90f845ccf0",
+  "isSuccess": true,
+  "statusCode": 200,
+  "errors": null
+}
+
+|||||||||||||||||||||||||||||||||||||
+||||||||||  DELETE          ||||||||||||
+|||||||||||||||||||||||||||||||||||||
+
+
+curl -X 'DELETE' \
+  'http://localhost:33682/api/Actors/string' \
+  -H 'accept: text/plain' \
+  -H 'XApiKey: 6CBxzdYcEgNDrRhMbDpkBF7e4d4Kib46dwL9ZE5egiL0iL5Y3dzREUBSUYVUwUkN'
+  
+  {
+  "traceId": "2a305691-cd5e-4f5c-907b-0d1edf107968",
+  "isSuccess": true,
+  "statusCode": 200,
+  "errors": null
+}
